@@ -16,10 +16,10 @@ jobs:
         run: git submodule init && git submodule update; make clean; make docker
       - name: deploy to pages
         run: |
+          export URL=$(git remote get-url origin | sed -s 's/https:\/\///g')
           rm *.tex; rm -rf .git
           rm .gitignore; git init
           git config user.name "Deploy"
           git config user.email "deploy@github.com"
           git add paper.pdf; git commit -m "deploy"
-          export URL=$(git remote get-url origin | sed -s 's/https:\/\///g')
           git push --force https://$TOKEN@$URL master:gh-pages

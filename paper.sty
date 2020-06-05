@@ -1,0 +1,61 @@
+
+\usepackage[cache=false]{minted}
+\usepackage{hyperref}
+\hypersetup{                    % ...like so
+  colorlinks,
+  linkcolor={red!70!black},
+  citecolor={red!70!black},
+  urlcolor={red!70!black}
+}
+
+\usepackage{template/tightenum}
+\usepackage{makecell}
+\usepackage{xspace}
+\usepackage[utf8]{inputenc}
+\usepackage[font=small]{caption}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{setspace}
+\usepackage[normalem]{ulem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\newcommand{\eg}[0]{e.g.,\xspace}
+\newcommand{\ie}[0]{i.e.,\xspace}
+\newcommand{\todo}[1]{{\color{red}#1}}
+\newcommand{\fig}[1]{Figure~\ref{#1}}
+\newcommand{\figtext}[2]{Figure~\hyperref[#1]{\getrefnumber{#1}#2}}
+\newcommand{\tab}[1]{Table~\ref{#1}}
+\newcommand{\algo}[1]{Algorithm~\ref{#1}}
+\newcommand{\codeline}[1]{\f{\ref{#1}}}
+\newcommand{\chref}[1]{\hyperref[#1]{\S\getrefnumber{#1}}}
+
+% function font
+\def\f#1{{\fontfamily{cmtt}\selectfont #1}}
+
+% cross and circle mark
+\newcommand{\cmark}{$\surd$}
+\newcommand{\xmark}{$\times$}
+
+\newcommand{\boldhline}[0]{\Xhline{2\arrayrulewidth}}
+\newcommand{\authora}[0]{$^{\dagger}$}
+\newcommand{\authorb}[0]{$^{\mathsection}$}
+\newcommand{\authorc}[0]{$^{*}$}
+
+% ============== do not change things above ===============
+% include user-defined packagehere
+
+% system name
+\newcommand{\xxx}{\textsc{XXX}\xspace}
+\newcommand{\xxtitle}{\xxx: XXXXXX}
+\newcommand{\githuburl}[0]{\url{https://github.com/xxx/xxx}}
+
+\newcommand{\subid}{xx}
+
+\newcommand{\bibsty}{ACM-Reference-Format}
+\newcommand{\bibfile}{bib/biblio}
+
+% ============== do not change things below ===============
+
+\newcommand{\subids}{Paper \#\subid}

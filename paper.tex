@@ -1,0 +1,18 @@
+
+
+\def\temacm{acm}
+\def\temndss{ndss}
+\def\temusenix{usenix}
+
+\def\temname{usenix}
+
+\ifx\temname\temacm
+    \input{template/template-acmart-sigconf}
+\else
+    \ifx\temname\temndss
+        \input{template/template-ndss2020}
+    \else
+        \input{template/template-usenix2019_v3.1}
+    \fi
+\fi
+
